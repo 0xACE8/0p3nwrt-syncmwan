@@ -24,9 +24,9 @@ function merge_package() {
     cd "$rootdir"
 }
 
-merge_package master https://github.com/x-wrt/packages mwan3 net/mwan3
-merge_package master https://github.com/x-wrt/luci luci-app-mwan3 applications/luci-app-mwan3
-merge_package master https://github.com/kiddin9/openwrt-packages luci-app-syncdial luci-app-syncdial
+merge_package master https://github.com/x-wrt/packages . net/mwan3
+merge_package master https://github.com/x-wrt/luci . applications/luci-app-mwan3
+merge_package master https://github.com/kiddin9/openwrt-packages . luci-app-syncdial
 #merge_package main https://github.com/shiyu1314/openwrt-onecloud target/linux kernel/6.6/amlogic
 
 exit 0
