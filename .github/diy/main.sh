@@ -27,6 +27,6 @@ function merge_package() {
 merge_package master https://github.com/x-wrt/packages . net/mwan3
 merge_package master https://github.com/x-wrt/luci . applications/luci-app-mwan3
 merge_package master https://github.com/kiddin9/openwrt-packages . luci-app-syncdial
-#merge_package main https://github.com/shiyu1314/openwrt-onecloud target/linux kernel/6.6/amlogic
+sed -i "s/o.default = 'unreachable'/o.default = 'default'/g" luci-app-mwan3/htdocs/luci-static/resources/view/mwan3/network/policy.js
 
 exit 0
