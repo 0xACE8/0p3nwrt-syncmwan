@@ -80,16 +80,6 @@ o.rmempty = false
 o = s:option(Flag, "nomwan", translate("不自动配置MWAN3负载均衡"))
 o.description = translate("需要自定义负载均衡设置或者要使用策略路由的用户选择")
 o.rmempty = false
-o:depends("ipv4", 0)
-o:depends("ipv6", 0)
-
-o=s:option(Flag,"ipv4","配置IPV4负载均衡","自动给MWAN3配置IPV4负载均衡")
-o.rmempty=false
-o:depends("nomwan", 0)
-
-o=s:option(Flag,"ipv6","配置IPV6负载均衡","自动给MWAN3配置IPV6负载均衡")
-o.rmempty=false
-o:depends("nomwan", 0)
 
 o = s:option(DummyValue, "_redial", translate("重新并发拨号"))
 o.template = "syncdial/redial_button"
